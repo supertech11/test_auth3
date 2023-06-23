@@ -34,8 +34,8 @@ class UrlAuthWebWeb extends UrlAuthWebPlatform {
   @override
   Future<void> launch(String url,
       {String? features, String name = "_blank", String cookies = ""}) async {
-    document.cookie = cookies;
     window.open(url, name, features);
+    document.cookie = cookies;
   }
 
   @override
